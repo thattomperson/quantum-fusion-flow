@@ -14,6 +14,7 @@ class AuthenticationTest extends TestCase
     {
         $response = $this->get('/login');
 
+        $response->assertContent('Forgot your password?');
         $response->assertStatus(200);
     }
 
